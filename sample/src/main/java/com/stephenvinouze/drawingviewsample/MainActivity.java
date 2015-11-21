@@ -49,6 +49,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void updateThickness(int value) {
         mThicknessText.setText("Thickness : " + value);
         mThicknessBar.setProgress(value);
+        mDrawingView.setDrawingThickness(value);
     }
 
     @Override

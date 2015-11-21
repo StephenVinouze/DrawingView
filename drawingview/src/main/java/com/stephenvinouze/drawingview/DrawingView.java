@@ -117,7 +117,7 @@ public class DrawingView extends View {
         mPaint.setStyle(Paint.Style.STROKE);
         mPaint.setStrokeJoin(Paint.Join.ROUND);
         mPaint.setStrokeCap(Paint.Cap.ROUND);
-        mPaint.setStrokeWidth(kLineThickness);
+        mPaint.setStrokeWidth(mThickness);
     }
 
     private void startTouch(float x, float y) {
