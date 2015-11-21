@@ -18,8 +18,8 @@ import android.view.View;
 public class DrawingView extends View {
 
     private static final int kColor = Color.BLACK;
-    private static final float kTouchTolerance = 4;
-    private static final float kLineThickness = 4;
+    private static final float kTouchTolerance = 5;
+    private static final float kLineThickness = 5;
 
     private Bitmap mBitmap;
     private Canvas mCanvas;
@@ -28,7 +28,9 @@ public class DrawingView extends View {
     private Paint mPaint;
     private float mX;
     private float mY;
-    private float mTolerance = kLineThickness;
+    private float mTolerance = kTouchTolerance;
+    private float mThickness = kLineThickness;
+    private int mColor = kColor;
 
     public DrawingView(Context context) {
         super(context);
@@ -59,12 +61,26 @@ public class DrawingView extends View {
         a.recycle();
     }
 
+    public int getDrawingColor() {
+        return mColor;
+    }
+
     public void setDrawingColor(int color) {
+        mColor = color;
         mPaint.setColor(color);
     }
 
+    public float getThickness() {
+        return mThickness;
+    }
+
     public void setDrawingThickness(float thickness) {
+        mThickness = thickness;
         mPaint.setStrokeWidth(thickness);
+    }
+
+    public float getTolerance() {
+        return mTolerance;
     }
 
     public void setDrawingTolerance(float tolerance) {

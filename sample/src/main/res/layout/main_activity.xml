@@ -5,11 +5,27 @@
     android:layout_height="match_parent"
     android:padding="@dimen/activity_vertical_margin">
 
+    <TextView
+        android:id="@+id/thickness_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"/>
+
+    <SeekBar
+        android:id="@+id/thickness_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@id/thickness_value"
+        android:layout_toRightOf="@id/thickness_value"/>
+
     <Button
         android:id="@+id/submit_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+        android:layout_above="@id/thickness_bar"
         android:text="SUBMIT DRAWING"
         android:textSize="16sp"/>
 
