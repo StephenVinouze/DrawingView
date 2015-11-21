@@ -5,17 +5,26 @@
     android:layout_height="match_parent"
     android:padding="@dimen/activity_vertical_margin">
 
+    <Button
+        android:id="@+id/color_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="COLOR DRAWING"
+        android:textSize="16sp"/>
+
     <TextView
         android:id="@+id/thickness_value"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"/>
+        android:layout_above="@id/color_button"
+        android:layout_marginBottom="5dp"/>
 
     <SeekBar
         android:id="@+id/thickness_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+        android:layout_above="@id/color_button"
         android:layout_marginLeft="10dp"
         android:layout_marginStart="10dp"
         android:layout_toEndOf="@id/thickness_value"
