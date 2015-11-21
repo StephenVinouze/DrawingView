@@ -62,6 +62,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 mDrawingImageView.setImageBitmap(null);
                 mThicknessText.setVisibility(View.VISIBLE);
                 mThicknessBar.setVisibility(View.VISIBLE);
+                mColorButton.setVisibility(View.VISIBLE);
             }
         }
         else if (v == mSubmitButton) {
@@ -70,6 +71,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             mDrawingImageView.setImageBitmap(mDrawingView.getDrawing());
             mThicknessText.setVisibility(View.GONE);
             mThicknessBar.setVisibility(View.GONE);
+            mColorButton.setVisibility(View.GONE);
         }
         else if (v == mColorButton) {
             ColorPicker colorPicker = new ColorPicker(this);

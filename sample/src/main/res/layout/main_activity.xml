@@ -6,10 +6,26 @@
     android:padding="@dimen/activity_vertical_margin">
 
     <Button
-        android:id="@+id/color_button"
+        android:id="@+id/clear_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
+        android:text="CLEAR DRAWING"
+        android:textSize="16sp"/>
+
+    <Button
+        android:id="@+id/submit_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/clear_button"
+        android:text="SUBMIT DRAWING"
+        android:textSize="16sp"/>
+
+    <Button
+        android:id="@+id/color_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/submit_button"
         android:text="COLOR DRAWING"
         android:textSize="16sp"/>
 
@@ -18,7 +34,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@id/color_button"
-        android:layout_marginBottom="5dp"/>
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="10dp"/>
 
     <SeekBar
         android:id="@+id/thickness_bar"
@@ -27,29 +44,14 @@
         android:layout_above="@id/color_button"
         android:layout_marginLeft="10dp"
         android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
         android:layout_toEndOf="@id/thickness_value"
         android:layout_toRightOf="@id/thickness_value"/>
-
-    <Button
-        android:id="@+id/submit_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@id/thickness_bar"
-        android:text="SUBMIT DRAWING"
-        android:textSize="16sp"/>
-
-    <Button
-        android:id="@+id/clear_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@id/submit_button"
-        android:text="CLEAR DRAWING"
-        android:textSize="16sp"/>
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@id/clear_button">
+        android:layout_above="@id/thickness_bar">
 
         <com.stephenvinouze.drawingview.DrawingView
             android:id="@+id/drawing_view"
